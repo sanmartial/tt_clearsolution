@@ -1,4 +1,4 @@
-package org.globaroman.tt_clearsolution;
+package org.globaroman.clearsolution;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
