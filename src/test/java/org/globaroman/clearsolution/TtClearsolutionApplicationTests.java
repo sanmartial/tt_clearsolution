@@ -1,4 +1,4 @@
-package org.globaroman.tt_clearsolution;
+package org.globaroman.clearsolution;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
