@@ -3,9 +3,11 @@ package org.globaroman.clearsolution.dto;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.globaroman.clearsolution.validation.BirthDate;
 import org.globaroman.clearsolution.validation.Phone;
+import java.time.LocalDate;
 
 @Data
 public class CreateUserRequestDto {
@@ -16,9 +18,9 @@ public class CreateUserRequestDto {
     private String firstName;
     @NotBlank
     private String lastName;
-    @NotBlank
+    @NotNull
     @BirthDate
-    private String birthDate;
+    private LocalDate birthDate;
     @Valid
     private AddressRequestDto addressRequestDto;
     @NotBlank

@@ -9,6 +9,7 @@ import org.globaroman.clearsolution.dto.SearchUserParameter;
 import org.globaroman.clearsolution.dto.UpdatePhoneRequestDto;
 import org.globaroman.clearsolution.dto.UserResponseDto;
 import org.globaroman.clearsolution.service.UserService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
+@Validated
 @RequestMapping("/api/v1/users")
 public class UserController {
 
@@ -57,10 +59,5 @@ public class UserController {
     public List<UserResponseDto> searchUserByBirthDate(
             @Valid SearchUserParameter searchUserParameter) {
         return userService.searchUsers(searchUserParameter);
-    }
-
-    @GetMapping("/{id}")
-    public UserResponseDto getUserById(@PathVariable Long id) {
-        return userService.getUserById(id);
     }
 }

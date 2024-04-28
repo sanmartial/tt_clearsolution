@@ -22,5 +22,4 @@ public interface UserService {
 
     List<UserResponseDto> searchUsers(SearchUserParameter searchUserParameter);
 
-    UserResponseDto getUserById(Long id);
 }

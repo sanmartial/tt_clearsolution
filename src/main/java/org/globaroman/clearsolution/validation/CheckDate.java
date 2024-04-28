@@ -8,12 +8,14 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.PARAMETER, ElementType.FIELD})
+@Target({ElementType.TYPE, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = PhoneValidator.class)
-public @interface Phone {
-    String message() default "Invalid format Phone";
+@Constraint(validatedBy = CheckDateValidator.class)
+public @interface CheckDate {
+    String message() default "fromDate must be less than toDate";
     Class<?>[] groups() default {};
-    Class<? extends Payload> [] payload() default {};
+    Class<? extends Payload>[] payload() default {};
+    String from();
+    String to();
 }
