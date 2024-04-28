@@ -45,7 +45,6 @@ public class ObjectsForTest {
         userResponseDto.setLastName("Lastname");
         userResponseDto.setBirthDate(LocalDate.parse("1999-01-01"));
         userResponseDto.setAddress(getAddress());
-
         return userResponseDto;
     }
 
@@ -57,7 +56,6 @@ public class ObjectsForTest {
         requestDto.setPhone("+380671112233");
         requestDto.setBirthDate(LocalDate.parse("1999-01-01"));
         requestDto.setAddressRequestDto(getAddressDto());
-
         return requestDto;
     }
 
